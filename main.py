@@ -5,8 +5,8 @@ print(f'{"--- CAESAR CIPHER SCRIPT ---":>57s}')
 print('==='*30)
 
 
-def encrypt_and_decrypt(text, key, mode):
-    """ This is a function to encrypt or decrpyt  """
+def encrypt_and_decrypt_text(text, key, mode):
+    """ This is a function to encrypt or decrpyt a text using Caesar's cipher. """
     result_text = ''    # result of the ciphered or plain text.
 
     if mode == 'd':
@@ -43,7 +43,7 @@ if __name__ == '__main__':
         print('*** Encryption mode selected. ***')
         key = int(input('Enter a key (1 through 26): '))
         text = str(input('Enter the text to encrypt: '))
-        ciphertext = encrypt_and_decrypt(text, key, mode=mode)     # plain text to be ciphered.
+        ciphertext = encrypt_and_decrypt_text(text, key, mode=mode)     # plain text to be ciphered.
         print()
         print(f'Cipher text: {ciphertext}')
     
@@ -51,6 +51,6 @@ if __name__ == '__main__':
         print('*** Decryption mode selected. ***')
         key = int(input('Enter a key (1 through 26): '))
         text = str(input('Enter the text to decrypt: '))
-        plaintext = encrypt_and_decrypt(text, key, mode=mode)  # convert ciphered text to plain text.
+        plaintext = encrypt_and_decrypt_text(text, key, mode=mode)  # convert ciphered text to plain text.
         print()
         print(f'Plain text: {plaintext}')
